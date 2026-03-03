@@ -1,0 +1,40 @@
+ALGORITHME AnalysePhrase
+
+VARIABLES
+    caractere    : CARACTERE
+    longueur     : ENTIER  ← 0
+    nbMots       : ENTIER  ← 1
+    nbVoyelles   : ENTIER  ← 0
+
+DEBUT
+    ECRIRE "Entrez votre phrase  : "
+        LIRE caractere
+    
+    TANTQUE caractere ≠ '.'
+        
+        // Compteur 1 : longueur de la phrase
+        longueur ← longueur + 1
+        
+        // Compteur 2 : nombre de mots
+        SI caractere = ' ' ALORS
+            nbMots ← nbMots + 1
+        FIN SI
+        
+        // Compteur 3 : nombre de voyelles
+        SI caractere = 'a' OU caractere = 'e' OU caractere = 'i' OU
+           caractere = 'o' OU caractere = 'u' OU caractere = 'y' OU
+           caractere = 'A' OU caractere = 'E' OU caractere = 'I' OU
+           caractere = 'O' OU caractere = 'U' OU caractere = 'Y' ALORS
+            nbVoyelles ← nbVoyelles + 1
+        FIN SI
+        
+        LIRE caractere
+        
+    FIN TANTQUE
+    
+    // Affichage des résultats
+    ECRIRE "Longueur de la phrase : ", longueur
+    ECRIRE "Nombre de mots       : ", nbMots
+    ECRIRE "Nombre de voyelles   : ", nbVoyelles
+
+FIN
