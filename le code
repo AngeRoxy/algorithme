@@ -7,7 +7,7 @@ VARIABLES
     nbVoyelles   : ENTIER  ← 0
 
 DEBUT
-    ECRIRE "Entrez votre phrase  : "
+    ECRIRE "Entrez votre phrase (terminez par un point) : "
         LIRE caractere
     
     TANTQUE caractere ≠ '.'
